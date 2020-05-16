@@ -1,0 +1,51 @@
+<div class="login-register-container">
+  <div class="inner-card">
+    <div wx:if="{{false}}" class="is-login-bg">
+      <div class="user-head">
+        <div class="img">
+          <image src="{{baseURL+ '/public/images/default.png'}}" />
+        </div>
+        <div class="user-name">
+          <p class="username">{{ userInfo.nickName }}</p>
+          <p class="email">{{ userInfo.nickName }}</p>
+        </div>
+      </div>
+      <div class="user-hot-msg">
+        <!-- 动态 -->
+        <p class="user-dongtai" wx:for="{{userHot}}" wx:key="index">
+          <navigator class="user-top-nav-link" url="{{item.link}}">
+            <span class="num">{{ item.count }}</span>
+            <span class="num-name">
+              {{
+              item.title
+              }}
+            </span>
+          </navigator>
+        </p>
+      </div>
+    </div>
+    <block wx:else>
+      <p class="login-tips">
+        <span>
+          <navigator url="/pages/login/login">
+            立即登录, 玩转博客
+            <van-icon name="arrow" />
+            <van-icon name="arrow" />
+            <van-icon name="arrow" />
+          </navigator>
+        </span>
+      </p>
+      <p class="other-login">
+        <van-button class="btn btn1" round type="warning" icon="phone-o">号码登录</van-button>
+        <van-button class="btn" round color="#4fc08d" icon="chat-o">社交账号</van-button>
+      </p>
+      <p class="register-tips">
+        还没有账号?
+        <span>
+          <navigator url="/pages/register/register">快速注册</navigator>
+        </span>
+      </p>
+    </block>
+  </div>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
+</div>

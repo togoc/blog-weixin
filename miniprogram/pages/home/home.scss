@@ -1,0 +1,185 @@
+@import "..\\..\\style\\app.scss";
+
+
+div.login-register-container {
+    width: 100%;
+
+    height: 300rpx;
+    background-image: linear-gradient($uni-color-primary-phone,
+            $uni-color-primary-phone,
+            #fff);
+    padding   : 7.5px 7.5px 0;
+    overflow  : hidden;
+    box-sizing: border-box;
+
+    div.inner-card {
+        width           : 100%;
+        height          : calc(300rpx - 7.5px);
+        background-color: #fff;
+        border-radius   : $uni-border-radius-base;
+        text-align      : center;
+
+
+        /*已登录提示*/
+        .is-login-bg {
+            width          : 100%;
+            height         : 100%;
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
+            background-image: linear-gradient($uni-color-primary-phone,
+                    $uni-color-primary-phone,
+                    #fff);
+
+            div.user-head {
+                box-sizing         : border-box;
+                width              : 100%;
+                color              : #fff;
+                height             : 130rpx;
+                // padding         : 0.2rem 0.4rem;
+                background-color   : $uni-color-primary-phone;
+                display            : flex;
+                flex-direction     : row;
+
+                div.img {
+                    height: 120rpx;
+                    width : 120rpx;
+
+                    image {
+                        height       : 120rpx;
+                        width        : 120rpx;
+                        border-radius: $uni-border-radius-circle;
+                    }
+                }
+
+                /*已登录用户名 */
+                div.user-name {
+                    overflow   : hidden;
+                    height     : 120rpx;
+                    width      : 100%;
+                    margin-left: 30rpx;
+
+                    .username {
+                        height       : 60rpx;
+                        width        : 100%;
+                        overflow     : hidden;
+                        text-overflow: ellipsis;
+                        white-space  : nowrap;
+                        font-weight  : bold;
+                        line-height  : 60rpx;
+                        font-size    : calc(60rpx / 1.33333);
+                    }
+
+                    .mail {
+                        height       : 60rpx;
+                        overflow     : hidden;
+                        text-overflow: ellipsis;
+                        font-weight  : bold;
+                        white-space  : nowrap;
+                        font-size    : calc(35rpx / 1.5);
+                    }
+
+                    p {
+                        height    : 50%;
+                        text-align: left;
+                    }
+                }
+            }
+
+            /*已登录动态信息 */
+            .user-hot-msg {
+                box-sizing      : border-box;
+                width           : 100%;
+                height          : 120rpx;
+                background-color: #fff;
+                border-radius   : $uni-border-radius-base $uni-border-radius-base 0 0;
+                display         : flex;
+                flex-direction  : row;
+                padding         : 10rpx 0;
+
+                p.user-dongtai {
+                    text-align: center;
+                    width     : 100%;
+
+                    .user-top-nav-link {
+                        width      : 100%;
+                        height     : 100%;
+                        line-height: 100rpx;
+
+                        span.num {
+                            font-size: 50rpx;
+                        }
+
+                        span.num-name {
+                            color      : $uni-text-color-grey;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*未登录提示*/
+        .login-tips {
+            height        : 97.5rpx;
+            width         : 100%;
+            font-size     : 16px;
+            font-weight   : bold;
+            box-sizing    : border-box;
+            vertical-align: middle;
+            line-height   : 97.5rpx;
+            padding       : 0 25%;
+
+            .van-icon {
+                vertical-align: middle;
+                font-size     : 12px;
+                color         : $uni-color-primary;
+            }
+        }
+
+        .other-login {
+            box-sizing: border-box;
+            padding   : 0 0.75rem;
+            height    : 90rpx;
+
+            .btn {
+                width           : 50%;
+                height          : 100%;
+                border-radius   : 0 90rpx 90rpx 0 !important;
+                background-color: #eaf4fd;
+                color           : $uni-color-primary;
+                font-weight     : bold;
+                font-size       : 14px;
+                white-space     : nowrap;
+                text-overflow   : ellipsis;
+                border          : 0;
+                overflow        : hidden;
+
+
+            }
+
+            .btn1 {
+                background-color: #fff1dc;
+                color           : $uni-color-warning;
+                border-radius   : 90rpx 0 0 90rpx !important;
+            }
+        }
+
+        .register-tips {
+            height        : 97.5rpx;
+            width         : 100%;
+            font-size     : 16px;
+            box-sizing    : border-box;
+            vertical-align: middle;
+            color         : $uni-text-color-grey;
+            line-height   : 97.5rpx;
+
+            span {
+                color      : $uni-color-primary;
+                font-size  : 14px;
+                margin-left: 2px;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!--components/index-blog-item.wxml-->
+<view class="blog-item" bindtap="handleViewPre" data-blogid="{{blog._id}}">
+  <h3 class="blog-title">{{ blog.title }}</h3>
+  <div class="blog-detail">
+    <span>{{ blog.markdown }}</span>
+    <div class="blog-thumbnails" wx-if="{{blog.thumbnails.length}}">
+      <image src="{{blog.thumbnails.length? blog.thumbnails[0].src: ''}}" />
+    </div>
+  </div>
+  <div class="blog-user-views">
+    <div class="anthor">
+      <a href="#">
+        <image src="{{baseIMGURL + blog.userid + '?byuserid=1'}}" />
+        <span>{{ blog.username }}</span>
+      </a>
+    </div>
+    <div class="views-like">
+      <span>
+        收藏
+        <span>{{ blog.likes.length }}</span>
+      </span>
+      <span>
+        阅读
+        <span>{{ blog.views }}</span>
+      </span>
+      <span>
+        评论
+        <span>{{ blog.comments.length }}</span>
+      </span>
+    </div>
+  </div>
+</view>

@@ -1,0 +1,25 @@
+.login {
+    width      : 100%;
+    box-sizing : border-box;
+    padding    : 12px 15rpx;
+    font-weight: bold;
+
+    .btn {
+        margin: 30rpx 0;
+    }
+
+    .input {
+        background-color: #fff;
+    }
+
+    .tips {
+        text-align: center;
+        color     : gray;
+
+        navigator {
+            color    : #409eff;
+            margin   : 10rpx;
+            font-size: 18.75px;
+        }
+    }
+}

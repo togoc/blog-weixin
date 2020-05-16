@@ -1,0 +1,24 @@
+<view class="login">
+  <van-cell-group class="input">
+    <van-field
+      value="{{ username }}"
+      label="用户名"
+      clearable
+      placeholder="请输入用户名"
+      error="{{!username.length}}"
+      bind:change="onChangeName"
+    />
+    <van-field
+      value="{{ password }}"
+      label="密码"
+      clearable
+      placeholder="请输入密码"
+      error="{{password.length<6}}"
+      border="{{ false }}"
+      bind:change="onChangePsw"
+    />
+  </van-cell-group>
+  <view class="btn">
+    <van-button size="large" color="#4fc08d" bindtap="summit">注册</van-button>
+  </view>
+</view>

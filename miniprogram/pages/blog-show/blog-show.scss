@@ -1,0 +1,147 @@
+@import "..\\..\\style\\app.scss";
+
+page {
+    width : 100%;
+    height: 100%;
+}
+
+
+.article {
+    padding         : 0 0.5rem;
+    margin          : 0 auto;
+    box-sizing      : border-box;
+    max-width       : 962px;
+    background-color: #fff;
+    width           : 100%;
+
+    .article-header {
+        padding         : 1rem;
+        box-sizing      : border-box;
+        z-index         : 9;
+        background-color: #fff;
+        width           : 100%;
+
+        .title {
+            letter-spacing: 0;
+            line-height   : calc(24px * 1.3333);
+            font-size     : 24px;
+            font-weight   : bold;
+            margin        : 1rem 0;
+        }
+
+        .article-author-edit {
+            font-size      : 14px;
+            min-height     : 40px;
+            padding        : 0.5rem;
+            border-bottom  : 1px solid #f5f6f7;
+            display        : flex;
+            flex-direction : row;
+            align-items    : center;
+            justify-content: space-between;
+            flex-wrap      : wrap;
+
+            .article-author {
+                display       : flex;
+                flex-direction: row;
+                align-items   : center;
+                position      : relative;
+
+                .img {
+                    margin-right: $uni-spacing-col-sm;
+                    width       : 30px;
+                    height      : 30px;
+
+                    image.ueser-head {
+                        width        : 30px;
+                        height       : 30px;
+                        border-radius: $uni-border-radius-circle;
+                    }
+                }
+
+                span {
+                    margin-right: $uni-spacing-col-base;
+                    display     : block;
+                }
+
+                .user-name-time {
+                    display       : flex;
+                    flex-direction: column;
+
+                    span.user-name {
+                        white-space  : nowrap;
+                        margin-bottom: 4px;
+                        font-size    : 16px;
+                        font-weight  : bold;
+                    }
+
+                    span.time {
+                        font-size  : 12px;
+                        white-space: nowrap;
+                        color      : $uni-text-color-grey;
+                    }
+                }
+            }
+
+            .article-edit {
+                padding     : 0.5rem;
+                padding-left: 38px;
+
+                span {
+                    padding: 0 5px;
+                }
+
+                .views {
+                    white-space : nowrap;
+                    color       : $uni-color-primary;
+                    font-size   : 14px;
+                    padding-left: 0;
+
+                    .icon {
+                        vertical-align: middle;
+                    }
+                }
+
+                .like {
+                    white-space: nowrap;
+                    cursor     : pointer;
+                    border-left: 1px solid $uni-bg-color-grey-more;
+                    color      : $uni-text-color-grey;
+                    font-size  : 14px;
+
+                    &::before {
+                        color    : $uni-color-error;
+                        font-size: 16px;
+                    }
+                }
+
+                .edit {
+                    border-left   : 1px solid $uni-bg-color-grey-more;
+                    letter-spacing: 3px;
+                    cursor        : pointer;
+                    color         : $uni-color-primary;
+
+                    &:hover {
+                        color: $uni-color-error;
+                    }
+                }
+            }
+        }
+    }
+
+    .article-detail {
+        background-color: #fff;
+        padding         : 1rem;
+        display         : block;
+        word-break      : break-all;
+        word-wrap       : break-word;
+    }
+
+    .comments {
+        padding         : 0 calc(1rem + 8px);
+        box-sizing      : border-box;
+        max-width       : 962px;
+        width           : 100%;
+        margin          : 12px auto 0;
+        background-color: #fff;
+    }
+}

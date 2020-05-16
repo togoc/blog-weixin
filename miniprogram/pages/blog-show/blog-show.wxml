@@ -1,0 +1,36 @@
+<wxs src="../../utils/util.wxs" module="filter" />
+<view class="article">
+  <view class="article-header">
+    <view class="title">{{ blog.title }}</view>
+    <view class="article-author-edit">
+      <view class="article-author">
+        <view class="img" wx:if="{{blog.userid}}">
+          <image src="{{baseIMGURL +blog.userid + '?byuserid=1'}}" class="ueser-head" />
+        </view>
+        <view class="user-name-time">
+          <span class="user-name">{{ blog.username }}</span>
+          <span class="time">
+            {{
+            filter.formatTime(blog.createdAt.toString(), 'yyyy年MM月dd日 hh:mm')
+            }}
+          </span>
+        </view>
+      </view>
+      <view class="article-edit">
+        <span class="views">
+          <van-icon class="icon" name="eye" />
+          {{
+          blog.views
+          }}
+        </span>
+        <!-- <span
+            @click.stop="handleLiked"
+            class="[ 'like', 'iconfont', liked ? 'icon-shoucang' : 'icon-shoucang1' ]"
+        >{{ likes.length }}</span>-->
+        <!-- <span class="edit" @click.stop="handleEdit" v-show="user._id === blog.userid">编辑</span> -->
+      </view>
+    </view>
+  </view>
+  <wemark md="{{blog.markdown}}" link highlight type="wemark"></wemark>
+  <view class="comments"></view>
+</view>

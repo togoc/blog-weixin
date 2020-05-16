@@ -1,0 +1,9 @@
+{
+    "easysass.compileAfterSave": true,
+    "easysass.formats": [
+        {
+            "format": "compressed",
+            "extension": ".wxss"
+        }
+    ]
+}

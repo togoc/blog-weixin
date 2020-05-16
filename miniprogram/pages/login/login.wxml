@@ -1,0 +1,28 @@
+<view class="login">
+  <van-cell-group class="input">
+    <van-field
+      value="{{ username }}"
+      label="用户名"
+      clearable
+      placeholder="请输入用户名"
+      error="{{!username.length}}"
+      bind:change="onChangeName"
+    />
+    <van-field
+      value="{{ password }}"
+      label="密码"
+      clearable
+      placeholder="请输入手机号"
+      error="{{password.length<6}}"
+      border="{{ false }}"
+      bind:change="onChangePsw"
+    />
+  </van-cell-group>
+  <view class="btn">
+    <van-button size="large" color="#4fc08d" bindtap="summit">登录</van-button>
+  </view>
+  <view class="tips">
+    <text selectable="false" space="false" decode="false">还没有账号?</text>
+    <navigator url="/pages/register/register">注册</navigator>
+  </view>
+</view>

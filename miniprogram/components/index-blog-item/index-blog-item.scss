@@ -1,0 +1,122 @@
+@import "..\\..\\style\\app.scss";
+
+.blog-item {
+    color             : $uni-text-color;
+    width             : 100%;
+    box-sizing        : border-box;
+    margin            : 0.1rem 0;
+    border-radius     : $uni-border-radius-base;
+    font-size         : 16px;
+    letter-spacing    : 1px;
+    background-color  : #fff;
+    display           : flex;
+    padding           : 0.25rem;
+    flex-direction    : column;
+    justify-content   : space-around;
+    border-bottom     : 1px solid $uni-border-color;
+    position          : relative;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    box-shadow        : 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    cursor            : pointer;
+    overflow          : hidden;
+
+    .blog-title {
+        font-size     : 18px;
+        font-weight   : bold;
+        color         : $uni-color-primary-phone;
+        margin-top    : 0;
+        width         : 100%;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+        letter-spacing: 0;
+        white-space   : nowrap;
+        line-height   : calc(18px * 1.333);
+    }
+
+    .blog-detail {
+        display       : flex;
+        flex-direction: row;
+        max-height    : 68px;
+
+        .blog-thumbnails {
+            image {
+                border-radius: $uni-border-radius-base;
+                height       : 68px;
+                width        : 68px;
+            }
+        }
+
+        span {
+            width         : 100%;
+            font-size     : 14px;
+            line-height   : 22px;
+            letter-spacing: 0;
+            word-break    : break-all;
+            white-space   : normal;
+            @extend .over3;
+        }
+    }
+
+    div.blog-user-views {
+        margin-top     : 2px;
+        font-size      : 16px;
+        color          : $uni-text-color;
+        display        : flex;
+        flex-direction : row;
+        align-items    : center;
+        justify-content: space-between;
+        flex-wrap      : wrap;
+
+        div.anthor {
+            height: 24px;
+
+            a {
+                height        : 24px;
+                display       : flex;
+                flex-direction: row;
+                align-items   : center;
+
+                image {
+                    width        : 24px;
+                    height       : 24px;
+                    border-radius: $uni-border-radius-circle;
+                    margin-right : 6px;
+                }
+
+                span {
+                    font-size     : 14px;
+                    color         : #3d3d3d;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        div.views-like {
+            margin-left: 25px;
+
+            &>span {
+                font-size: 12px;
+                color    : $uni-text-color;
+                padding  : 0 5px;
+
+                &:nth-of-type(2) {
+                    border-left : 1px solid $uni-bg-color-grey-more;
+                    border-right: 1px solid $uni-bg-color-grey-more;
+                }
+
+                span {
+                    color         : $uni-color-primary;
+                    vertical-align: bottom;
+                    letter-spacing: 0;
+                    margin        : 0 2px;
+                }
+
+                &::before {
+                    color      : $uni-text-color;
+                    font-size  : 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

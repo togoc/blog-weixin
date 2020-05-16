@@ -1,0 +1,1 @@
+.over2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.over3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}page{background-color:#f8f8f8;height:100%}div,p{display:block}navigator{display:inline}
