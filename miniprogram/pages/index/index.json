@@ -1,7 +1,9 @@
 {
-  "usingComponents": {
-    "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
-  },
-  "navigationBarTitleText": "首页"
+    "usingComponents": {
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index"
+    },
+    "navigationBarTitleText": "首页",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#98f2c9"
 }

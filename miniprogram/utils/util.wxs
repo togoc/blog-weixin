@@ -1,5 +1,7 @@
 var formatTime = function (strDate, format = "yyyy-MM-dd hh:mm:ss") {
-  var realDate = strDate ? getDate(strDate.replace(getRegExp('-', 'g'), '/')) : getDate();
+  // 数字 
+  // 字符串 strDate.replace(getRegExp('-', 'g')
+  var realDate = strDate ? getDate(strDate) : getDate();
   var regYear = getRegExp("(y+)", "i");
   var date = [
     ["M+", realDate.getMonth() + 1],

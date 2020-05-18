@@ -1,15 +1,35 @@
 // miniprogram/pages/login/login.js
+let app = getApp();
+const { wxHttp, getUser } = app
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username: "",
-    password: ""
+    email: "",
+    password: "",
   },
-  summit() {
-    console.log(this.data)
+  async  summit() {
+    let { email, password } = this.data
+    let data = await wxHttp({
+      method: "POST",
+      url: "/user-service/create-user", data: {
+        email, password
+      }
+    })
+
+    let { token, user } = data
+
+    if (token && user) {
+      wx.setStorageSync('BLOG_TOKEN', token);
+      app.globalData.user = user
+      getUser()
+      wx.switchTab({
+        url: '/pages/home/home'
+      });
+    }
   },
   onChangePsw(event) {
     this.setData({
@@ -18,7 +38,7 @@ Page({
   },
   onChangeName(event) {
     this.setData({
-      username: event.detail
+      email: event.detail
     })
   },
   /**

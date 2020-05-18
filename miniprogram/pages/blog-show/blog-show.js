@@ -13,7 +13,7 @@ Page({
     baseIMGURL: ""
   },
   async getBlog(data) {
-    let blog = await wxHttp({ url: '/blog-service/get-index-blog', data })
+    let blog = await wxHttp({ url: '/blog-service/get-index-blog', data }) || {};
     wx.setNavigationBarTitle({
       title: blog.title
     });

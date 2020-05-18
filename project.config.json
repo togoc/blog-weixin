@@ -24,7 +24,7 @@
 	},
 	"appid": "wxbe5ce0f3aa52e5c3",
 	"projectname": "blog-weixin",
-	"libVersion": "2.8.1",
+	"libVersion": "2.11.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
@@ -77,6 +77,19 @@
 					"name": "pages/register/register",
 					"pathName": "pages/register/register",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my-blog/my-blog",
+					"pathName": "pages/my-blog/my-blog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my-like-blog/my-like-blog",
+					"pathName": "pages/my-like-blog/my-like-blog",
 					"scene": null
 				}
 			]

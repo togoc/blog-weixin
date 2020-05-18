@@ -1,0 +1,153 @@
+@import "..\\..\\style\\app.scss";
+
+.my-page-blog-item {
+    width             : 100%;
+    user-select       : none;
+    letter-spacing    : 1px;
+    padding           : 16rpx;
+    box-sizing        : border-box;
+    background-color  : #fff;
+    display           : flex;
+    flex-direction    : column;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(61, 23, 23, 0.04);
+    box-shadow        : 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    cursor            : pointer;
+    overflow          : hidden;
+
+    &:first-of-type {
+        border-top: 1px solid $uni-border-color;
+    }
+
+    &:hover {
+        div.handle-time {
+            div.handle {
+                display: block;
+            }
+        }
+    }
+
+    .column-item {
+        width: 100%;
+    }
+
+    div.title {
+        margin-bottom : 6px;
+        letter-spacing: 0;
+
+        p {
+            font-family  : "Microsoft YaHei";
+            font-weight  : bolder;
+            width        : 100%;
+            color        : $uni-text-color;
+            font-size    : 18px;
+            max-height   : calc(18px * 1.3333333);
+            line-height  : calc(18px * 1.3333333);
+            overflow     : hidden;
+            text-overflow: ellipsis;
+            white-space  : nowrap;
+        }
+    }
+
+    div.detail {
+        span {
+            width             : 100%;
+            display           : -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow          : hidden;
+            line-height       : calc(14px * 1.3333333);
+            font-size         : 14px;
+            max-height        : 37.3333324px;
+        }
+    }
+
+    div.handle-time {
+        padding-top    : 6px;
+        display        : flex;
+        flex-direction : row;
+        justify-content: space-between;
+        flex-wrap      : wrap;
+
+        div.time-views {
+            span {
+                vertical-align: bottom;
+            }
+
+            span.time {
+                padding-right: 0.5rem;
+                color        : $uni-text-color-grey;
+                font-size    : 12px;
+                border-right : 1px solid $uni-bg-color-grey-more;
+            }
+
+            span.views {
+                border-right: 1px solid $uni-bg-color-grey-more;
+                padding     : 0 0.5rem;
+
+                span.views-target {
+                    color    : $uni-color-primary;
+                    font-size: 12px;
+                }
+            }
+
+            span.comments {
+                padding: 0 0.5rem;
+
+                span.comments-target {
+                    color    : $uni-color-primary;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        div.handle {
+            white-space   : nowrap;
+            display       : none;
+            font-size     : 16px;
+            letter-spacing: 1px;
+            margin-right  : 1rem;
+
+            span.edit {
+                padding: 0 3px;
+
+                &:hover {
+                    color: $uni-color-error;
+                }
+            }
+
+            span.delete {
+                border-left: 1px solid $uni-bg-color-grey-more;
+                padding    : 0 3px;
+
+                &:hover {
+                    color: $uni-color-error;
+                }
+            }
+
+            .liked {
+                letter-spacing: 0;
+            }
+
+            &:hover {
+                color: $uni-color-warning;
+            }
+        }
+    }
+}
+
+.right {
+    height        : 100%;
+    width         : 100%;
+    display       : flex;
+    flex-direction: row;
+
+    .delete-button {
+        width : 50%;
+        height: 100%;
+
+        button {
+            height: 100%;
+            width : 100%;
+        }
+    }
+}

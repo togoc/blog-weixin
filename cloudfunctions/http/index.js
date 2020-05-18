@@ -3,7 +3,7 @@ const request = require('request-promise');
 
 const BASEURL = "http://106.13.184.92:3000/blog"
 const HANDLE = {
-  async GET(url, data) {
+  async GET(url, data, headers) {
     let dataStr = '';
     Object.keys(data).forEach(key => {
       if (data[key] !== undefined)
@@ -15,27 +15,38 @@ const HANDLE = {
       url = url + '?' + dataStr;
     }
 
-    return await request(BASEURL + url, {
-      json: true
-    })
+    try {
+      return await request(BASEURL + url, {
+        json: true,
+        headers
+      })
+    } catch (error) {
+      return error
+    }
   },
-  async POST(url, data) {
-    return await request.post(BASEURL + url, {
-      json: true,
-      body: data
-    })
+  async POST(url, data, headers) {
+    try {
+      return await request.post(BASEURL + url, {
+        json: true,
+        body: data,
+        headers
+      })
+    } catch (error) {
+      return error
+    }
   }
 }
 
 // 云函数入口函数
-exports.main = async ({
+exports.main = async({
   url,
   method = "GET",
-  data = {}
+  data = {},
+  headers = {}
 }, context) => {
 
   return HANDLE[method] ?
-    HANDLE[method](url, data) : result = {
+    HANDLE[method](url, data, headers) : result = {
       statusCode: 404,
       msg: '请使用GET或者POST'
     };

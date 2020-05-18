@@ -1,50 +1,26 @@
-// miniprogram/pages/login/login.js
-let app = getApp();
-const { wxHttp, getUser } = app
-
+// miniprogram/pages/my-blog/my-blog.js
+const app = getApp()
+const { wxHttp } = app
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    email: "",
-    password: "",
-  },
-  async  summit() {
-    let { email, password } = this.data
-    let data = await wxHttp({
-      method: "POST",
-      url: "/user-service/login", data: {
-        email, password
-      }
-    }) || {};
-    let { token, user } = data
+    item: {
 
-    if (token && user) {
-      wx.setStorageSync('BLOG_TOKEN', token);
-      app.globalData.user = user
-      getUser()
-      wx.switchTab({
-        url: '/pages/home/home'
-      });
-    }
+    },
+    blogs: []
   },
-  onChangePsw(event) {
-    this.setData({
-      password: event.detail
-    })
-  },
-  onChangeName(event) {
-    this.setData({
-      email: event.detail
-    })
+  async getMyBlog() {
+    let blogs = await wxHttp({ url: "/blog-service/get-my-blog" }) || [];
+    this.setData({ blogs })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMyBlog()
   },
 
   /**

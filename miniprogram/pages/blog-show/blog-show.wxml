@@ -1,6 +1,6 @@
 <wxs src="../../utils/util.wxs" module="filter" />
 <view class="article">
-  <view class="article-header">
+  <view class="article-header" wx:if="{{blog._id}}">
     <view class="title">{{ blog.title }}</view>
     <view class="article-author-edit">
       <view class="article-author">
@@ -11,7 +11,7 @@
           <span class="user-name">{{ blog.username }}</span>
           <span class="time">
             {{
-            filter.formatTime(blog.createdAt.toString(), 'yyyy年MM月dd日 hh:mm')
+            filter.formatTime(blog.createdAt, 'yyyy年MM月dd日 hh:mm')
             }}
           </span>
         </view>

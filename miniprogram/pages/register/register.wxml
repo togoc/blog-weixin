@@ -1,11 +1,11 @@
 <view class="login">
   <van-cell-group class="input">
     <van-field
-      value="{{ username }}"
-      label="用户名"
+      value="{{ email }}"
+      label="邮箱"
       clearable
-      placeholder="请输入用户名"
-      error="{{!username.length}}"
+      placeholder="请输入邮箱"
+      error="{{!email.length}}"
       bind:change="onChangeName"
     />
     <van-field
@@ -19,6 +19,11 @@
     />
   </van-cell-group>
   <view class="btn">
-    <van-button size="large" color="#4fc08d" bindtap="summit">注册</van-button>
+    <van-button
+      size="large"
+      disabled="{{password.length<6||!email.length}}"
+      color="#4fc08d"
+      bind:click="summit"
+    >注册</van-button>
   </view>
 </view>

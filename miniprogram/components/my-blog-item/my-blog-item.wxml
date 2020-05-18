@@ -1,0 +1,32 @@
+<wxs src="../../utils/util.wxs" module="filter" />
+<van-swipe-cell right-width="{{ 120 }}" wx:if="{{blog._id}}">
+  <div class="my-page-blog-item" bindtap="handleViewPre" data-blogid="{{blog._id}}">
+    <div class="title column-item">
+      <p>{{ blog.title }}</p>
+    </div>
+    <div class="detail column-item">
+      <span>{{ blog.markdown }}</span>
+    </div>
+    <div class="handle-time column-item">
+      <div class="time-views">
+        <span class="time">
+          {{
+          filter.formatTime(blog.createdAt, 'yyyy/MM/dd hh:mm')
+          }}
+        </span>
+        <span class="views">
+          阅读数
+          <span class="views-target">{{ blog.views }}</span>
+        </span>
+        <span class="comments">
+          评论数
+          <span class="comments-target">{{ blog.comments ? blog.comments.length : 0 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <view class="right" slot="right">
+    <van-button square bind:click="handleDel" type="danger" class="delete-button">删除</van-button>
+    <van-button square bind:click="handleDel" type="primary" class="delete-button">编辑</van-button>
+  </view>
+</van-swipe-cell>

@@ -1,0 +1,16 @@
+@import "..\\..\\style\\app.scss";
+
+.h5-my-blog {
+    width    : 100%;
+    font-size: 16px;
+    height   : 100%;
+
+    .my-blog-container {
+        width : 100%;
+        height: 100%;
+    }
+}
+
+.delete-button {
+    height: 100%;
+}

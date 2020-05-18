@@ -1,6 +1,6 @@
 // pages/home/home.js
 const app = getApp()
-const wxHttp = app.wxHttp
+const { wxHttp } = app
 const baseURL = app.globalData.baseURL
 Page({
 
@@ -9,13 +9,12 @@ Page({
    */
   data: {
     baseURL: "http://106.13.184.92:3000",
-    userInfo: {},
-    hasUserInfo: false,
+    userInfo: null,
     userHot: [
       {
         title: "动态",
         count: 10,
-        link: "/my-blog"
+        link: "/pages/my-blog/my-blog"
       },
       {
         title: "关注",
@@ -28,13 +27,54 @@ Page({
         link: "/my-fans"
       }
     ],
+    myLink: [
+      {
+        title: "我的关注",
+        icon: "like",
+        link: "/my-focus"
+      },
+      {
+        title: "我的收藏",
+        icon: "star",
+        link: "/pages/my-like-blog/my-like-blog"
+      },
+      {
+        title: "我的博客",
+        icon: "todo-list",
+        link: "/pages/my-blog/my-blog"
+      },
+      {
+        title: "我的关注",
+        icon: "like-o",
+        link: "/my-focus"
+      },
+      {
+        title: "我的关注",
+        icon: "like-o",
+        link: "/my-focus"
+      },
+      {
+        title: "我的关注",
+        icon: "like-o",
+        link: "/my-focus"
+      },
+      {
+        title: "我的关注",
+        icon: "like-o",
+        link: "/my-focus"
+      },
+      {
+        title: "更多",
+        icon: "weapp-nav",
+        link: "/my-focus"
+      }
+    ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   },
   /**
@@ -42,10 +82,8 @@ Page({
    */
   onLoad: function (options) {
     if (app.globalData.userInfo) {
-      console.log(1)
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
       })
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -53,7 +91,7 @@ Page({
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          user: app.globalData.user
         })
       }
     } else {
@@ -63,11 +101,23 @@ Page({
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
-            hasUserInfo: true,
             baseURL
           })
         }
       })
+    }
+
+    // 获取App.js 回调
+    if (app.globalData.user) {
+      this.setData({
+        user: app.globalData.user,
+      })
+    } else {
+      app.getUserCallback = res => {
+        this.setData({
+          user: res
+        })
+      }
     }
   },
 
