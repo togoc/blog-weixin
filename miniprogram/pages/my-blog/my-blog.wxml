@@ -1,5 +1,5 @@
 <div class="h5-my-blog">
-  <scroll-view scroll-y class="my-blog-container">
+  <view class="my-blog-container">
     <my-blog-item blog="{{item}}" wx:for="{{blogs}}" wx:key="_id" />
-  </scroll-view>
+  </view>
 </div>

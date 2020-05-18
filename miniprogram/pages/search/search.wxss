@@ -1,1 +1,1 @@
-.search{width:100%}
+.search{width:100%}.search .swiper-img{width:100%;height:100%}.search .van-tab--active{color:#4fc08d}.search .tabs{height:calc(100vh - 50px);width:100%}.search .tabs .swiper-item{width:100%;min-height:calc(100vh - 44px);overflow-y:auto;box-sizing:border-box;font-size:18px;padding:0 8px;background-color:#fff;padding-bottom:50px}.search .tabs .swiper-item .sv{height:calc(100vh - 94px)}

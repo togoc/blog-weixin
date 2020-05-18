@@ -16,7 +16,7 @@ const HANDLE = {
     }
 
     try {
-      return await request(BASEURL + url, {
+      return await request(encodeURI(BASEURL + url), {
         json: true,
         headers
       })
@@ -26,7 +26,7 @@ const HANDLE = {
   },
   async POST(url, data, headers) {
     try {
-      return await request.post(BASEURL + url, {
+      return await request.post(encodeURI(BASEURL + url), {
         json: true,
         body: data,
         headers

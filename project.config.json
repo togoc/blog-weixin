@@ -90,6 +90,13 @@
 					"id": -1,
 					"name": "pages/my-like-blog/my-like-blog",
 					"pathName": "pages/my-like-blog/my-like-blog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
 					"scene": null
 				}
 			]

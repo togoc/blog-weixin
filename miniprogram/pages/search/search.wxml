@@ -5,5 +5,39 @@
     background="#4fc08d"
     placeholder="请输入搜索关键词"
     focus
+    bind:search="handleSearch"
   />
+  <block wx:if="{{searchList}}">
+    <index-blog-item wx:for="{{searchList}}" blog="{{item}}" wx:key="_id" />
+  </block>
+  <block wx:else>
+    <swiper autoplay circular indicator-dots indicator-active-color="#4fc08d" style="height:224rpx">
+      <swiper-item wx:for="{{swiperList}}" wx:key="_id" bindtap="handleClickSwiper">
+        <image class="swiper-img" src="{{baseURL+item.img_url}}" lazy-load="false" />
+      </swiper-item>
+    </swiper>
+
+    <van-tabs
+      id="sw"
+      sticky
+      animated
+      swipeable
+      color="#4fc08d"
+      active="{{ active }}"
+      bind:change="onChange"
+      class="tabs"
+    >
+      <van-tab
+        title="{{item.title}}"
+        wx:for="{{tabList}}"
+        wx:key="title"
+        title-style="font-weight:bold;"
+        class="swiper-item"
+      >
+        <scroll-view scroll-y scroll-with-animation class="sv" bindscroll="onScroll">
+          <index-blog-item wx:for="{{item.list}}" wx:for-item="blog" blog="{{blog}}" wx:key="title"></index-blog-item>
+        </scroll-view>
+      </van-tab>
+    </van-tabs>
+  </block>
 </view>

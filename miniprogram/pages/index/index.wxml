@@ -10,7 +10,13 @@
   />
   <view class="tab-container">
     <van-tabs animated swipeable color="#4fc08d" active="{{ active }}" bind:change="onChange">
-      <van-tab title="{{blog.title}}" wx:for="{{list}}" wx:for-item="blog" wx:key="title">
+      <van-tab
+        title="{{blog.title}}"
+        wx:for="{{list}}"
+        wx:for-item="blog"
+        wx:key="title"
+        title-style="font-weight:bold;"
+      >
         <view scroll-y class="swiper-item">
           <index-blog-item wx:for="{{blog.list}}" blog="{{item}}" wx:key="title"></index-blog-item>
         </view>

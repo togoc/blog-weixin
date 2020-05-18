@@ -35,11 +35,34 @@ App({
         }
       }
     })
-
     //获取服务器用户信息
     this.getUser()
   },
-  // 自定义方法
+  // 自定义方法 
+  // 返回一个函数, 用于判断是否更新本地数据
+  isGetList(requestForm, key) {
+    let _this = this
+    return async function (refresh) {
+      let List = null
+      if (refresh) {
+        // 多个参数
+        if (Array.isArray(requestForm)) {
+          let arr = requestForm.map(v => _this.wxHttp(v))
+          List = await Promise.all(arr)
+        } else {
+          List = await _this.wxHttp(requestForm)
+        }
+        wx.setStorageSync(key, JSON.stringify(List));
+      } else {
+        let list = wx.getStorageSync(key)
+
+        if (!list) return _this.isGetList(requestForm, key)(true)
+
+        List = JSON.parse(list)
+      }
+      return List
+    }
+  },
   showLoading() {
     wx.showLoading({
       title: '加载中',
@@ -49,7 +72,7 @@ App({
   showToast(message) {
     wx.showToast({
       title: message,
-      mask: true,
+      mask: false,
       icon: 'none'
     });
     return null

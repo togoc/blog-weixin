@@ -1,6 +1,6 @@
 // miniprogram/pages/my-blog/my-blog.js
 const app = getApp()
-const { wxHttp } = app
+const { isGetList } = app
 Page({
 
   /**
@@ -12,63 +12,26 @@ Page({
     },
     blogs: []
   },
-  async getMyBlog() {
-    let blogs = await wxHttp({ url: "/blog-service/get-my-blog" }) || [];
+
+  async getMyBlog(refresh) {
+    let blogs = await this.getList(refresh)
     this.setData({ blogs })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getMyBlog()
+    this.getList = isGetList({ url: "/blog-service/get-my-blog" }, 'MY_BLOG');
+    this.getMyBlog();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh: async function () {
+    await this.getMyBlog(true);
+    wx.stopPullDownRefresh()
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
