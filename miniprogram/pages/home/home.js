@@ -71,16 +71,10 @@ Page({
     ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  getUserInfo: function (e) {
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  setUser: async function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -90,8 +84,7 @@ Page({
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
         this.setData({
-          userInfo: res.userInfo,
-          user: app.globalData.user
+          userInfo: res.userInfo
         })
       }
     } else {
@@ -118,6 +111,12 @@ Page({
           user: res
         })
       }
+      // 有点风险 主要是解决退出登录 仍显示用户信息的问题
+      if (this.data.user !== null) {
+        this.setData({
+          user: null
+        })
+      }
     }
   },
 
@@ -138,6 +137,7 @@ Page({
         active: 2
       })
     }
+    this.setUser()
   },
 
   /**

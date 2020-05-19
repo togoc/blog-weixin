@@ -39,6 +39,12 @@ App({
     this.getUser()
   },
   // 自定义方法 
+  logout() {
+    this.globalData.user = null
+    wx.clearStorageSync('BLOG_TOKEN');
+    wx.clearStorageSync('MY_BLOG');
+    wx.clearStorageSync('MY_LIKE_BLOG');
+  },
   // 返回一个函数, 用于判断是否更新本地数据
   isGetList(requestForm, key) {
     let _this = this

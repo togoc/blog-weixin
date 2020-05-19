@@ -1,0 +1,145 @@
+@import "..\\..\\style\\app.scss";
+
+page {
+    background-color: #fff;
+}
+
+.user-info {
+    width         : 100%;
+    padding-bottom: 50px;
+
+    .haead-img-bg {
+        width   : 100%;
+        height  : 400rpx;
+        overflow: hidden;
+        z-index : -1;
+        position: relative;
+        filter  : brightness(80%);
+
+        .img {
+            width: 100%;
+        }
+    }
+
+    .info {
+        width     : 100%;
+        margin-top: -140rpx;
+        z-index   : 5;
+
+        .img-name {
+            display       : flex;
+            flex-direction: row;
+            width         : 100%;
+            height        : 250rpx;
+            box-sizing    : border-box;
+            padding-top   : 45rpx;
+
+            .user-img-container {
+                width      : 224rpx;
+                padding    : 20rpx;
+                height     : 200rpx;
+                box-sizing : border-box;
+                padding-top: 0;
+
+                .user-img {
+                    width : 180rpx;
+                    height: 180rpx;
+
+                }
+            }
+
+            .user-name {
+                display       : flex;
+                flex-direction: column;
+                padding       : 20rpx 0;
+                box-sizing    : border-box;
+                width         : 100%;
+                max-width     : 370rpx;
+
+
+                .name {
+                    height       : 80rpx;
+                    text-overflow: ellipsis;
+                    white-space  : nowrap;
+                    overflow     : hidden;
+                    width        : 100%;
+                    font-size    : 45rpx;
+                    color        : #fff;
+                }
+
+                .id {
+                    font-style: 32rpx;
+                }
+
+                .info-item {
+                    .title {
+                        margin-right: 10rpx;
+                    }
+                }
+            }
+
+            .like {
+                text-align : center;
+                width      : 100rpx;
+                height     : 100rpx;
+                line-height: 24rpx;
+
+                .like-num {
+                    color    : #fff;
+                    font-size: 24rpx;
+                }
+            }
+        }
+
+        .info-form {
+            width     : 100%;
+            box-sizing: border-box;
+            padding   : 20rpx;
+
+
+            .info-form-item {
+                display       : flex;
+                flex-direction: row;
+                align-items   : center;
+                border-top    : 1px solid $uni-bg-color-grey;
+                padding       : 3px 0;
+
+                &:first-of-type {
+                    border-top: 0;
+                }
+
+                text.info-form-item-title {
+                    font-weight: bold;
+                    padding    : 20rpx;
+                }
+
+                text.info-form-item-context {
+                    word-break: break-all;
+                    word-wrap : break-word;
+                }
+            }
+        }
+    }
+
+    .handle-btn {
+        position       : fixed;
+        padding        : 20rpx 0;
+        left           : 0;
+        bottom         : 0;
+        width          : 100%;
+        height         : 50px;
+        display        : flex;
+        flex-direction : row;
+        justify-content: space-around;
+        box-sizing     : border-box;
+
+        van-button {
+            width : 30%;
+            height: 100%;
+
+            button {
+                height: 100%;
+            }
+        }
+    }
+}

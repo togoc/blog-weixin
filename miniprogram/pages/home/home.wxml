@@ -2,7 +2,7 @@
   <div class="login-register-container">
     <div class="inner-card">
       <div wx:if="{{user}}" class="is-login-bg">
-        <div class="user-head">
+        <navigator class="user-head" url="/pages/my-setting/my-setting">
           <div class="img">
             <image src="{{user.avatar?user.avatar: baseURL+ '/public/images/default.png'}}" />
           </div>
@@ -10,7 +10,10 @@
             <p class="username">{{ user.email }}</p>
             <p class="email">{{ user.email }}</p>
           </div>
-        </div>
+          <div class="my-info-link">
+            <van-icon name="arrow" />
+          </div>
+        </navigator>
         <div class="user-hot-msg">
           <!-- 动态 -->
           <p class="user-dongtai" wx:for="{{userHot}}" wx:key="index">
@@ -26,7 +29,6 @@
         </div>
       </div>
       <block wx:else>
-        {{user}}
         <p class="login-tips">
           <span>
             <navigator url="/pages/login/login">
@@ -49,7 +51,6 @@
         </p>
       </block>
     </div>
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
   </div>
   <ul class="my-link">
     <li wx:for="{{myLink}}" wx:key="title">

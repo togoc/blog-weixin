@@ -9,10 +9,10 @@
   </div>
   <div class="blog-user-views">
     <div class="anthor">
-      <a href="#">
+      <navigator class="link" url="{{'/pages/my-setting/my-setting?id='+blog.userid}}">
         <image src="{{baseIMGURL + blog.userid + '?byuserid=1'}}" />
         <span>{{ blog.username }}</span>
-      </a>
+      </navigator>
     </div>
     <div class="views-like">
       <span>

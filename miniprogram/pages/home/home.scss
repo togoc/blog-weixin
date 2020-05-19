@@ -1,7 +1,7 @@
 @import "..\\..\\style\\app.scss";
 
 
-div.login-register-container {
+.login-register-container {
     width: 100%;
 
     height: 300rpx;
@@ -12,7 +12,7 @@ div.login-register-container {
     overflow  : hidden;
     box-sizing: border-box;
 
-    div.inner-card {
+    .inner-card {
         width           : 100%;
         height          : calc(300rpx - 7.5px);
         background-color: #fff;
@@ -31,7 +31,7 @@ div.login-register-container {
                     $uni-color-primary-phone,
                     #fff);
 
-            div.user-head {
+            .user-head {
                 box-sizing         : border-box;
                 width              : 100%;
                 color              : #fff;
@@ -41,7 +41,7 @@ div.login-register-container {
                 display            : flex;
                 flex-direction     : row;
 
-                div.img {
+                .img {
                     height: 120rpx;
                     width : 120rpx;
 
@@ -52,11 +52,18 @@ div.login-register-container {
                     }
                 }
 
+                .my-info-link {
+                    width      : 80rpx;
+                    font-size  : 40rpx;
+                    font-weight: bold;
+                    line-height: 130rpx;
+                }
+
                 /*已登录用户名 */
-                div.user-name {
+                .user-name {
                     overflow   : hidden;
                     height     : 120rpx;
-                    width      : 100%;
+                    width      : 440rpx;
                     margin-left: 30rpx;
 
                     .username {
@@ -69,6 +76,8 @@ div.login-register-container {
                         line-height  : 60rpx;
                         font-size    : calc(60rpx / 1.33333);
                     }
+
+
 
                     .mail {
                         height       : 60rpx;

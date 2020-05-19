@@ -1,0 +1,50 @@
+<!--miniprogram/pages/my-setting/my-setting.wxml-->
+<view class="user-info">
+  <view class="haead-img-bg">
+    <image
+      class="img"
+      src="http://106.13.184.92:3000/blog/file-service/img/5eae80aaf9e65f03284d962c"
+      lazy-load="false"
+    />
+  </view>
+  <view class="info">
+    <view class="img-name">
+      <view class="user-img-container">
+        <image
+          class="user-img"
+          src="http://106.13.184.92:3000/blog/file-service/img/5eae80aaf9e65f03284d962c"
+          lazy-load="false"
+        />
+      </view>
+      <view class="user-name">
+        <text class="name">{{user.name}}</text>
+        <view class="info-item id">
+          <text class="title">id:</text>
+          <text>{{user._id}}</text>
+        </view>
+      </view>
+      <view class="like">
+        <van-icon name="good-job" color="#ffffff" size="50rpx" />
+        <text class="like-num">17572</text>
+      </view>
+    </view>
+    <view class="info-form">
+      <view
+        class="info-form-item"
+        wx:for="{{user}}"
+        wx:key="key"
+        wx:for-index="key"
+        wx:for-item="value"
+      >
+        <van-icon name="photograph" />
+        <text class="info-form-item-title">{{key}}:</text>
+        <text class="info-form-item-context">{{value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="handle-btn" wx:if="{{currentUser._id === user._id}}">
+    <van-button plain type="warning" bind:click="handleLogout">清除token</van-button>
+    <van-button type="danger" bind:click="handleLogout">退出登录</van-button>
+    <van-button type="primary" bind:click="handleLogout">切换用户</van-button>
+  </view>
+</view>

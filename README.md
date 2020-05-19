@@ -10,3 +10,8 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+#  遗留问题
+
+- 当我的收藏, 我的博客列表为空时, 页面空白且没有提示下拉刷新.
+- 搜索无数据时没有提示.
+- 退出登录没有跳转页面.

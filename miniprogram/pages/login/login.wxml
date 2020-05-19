@@ -12,6 +12,7 @@
       value="{{ password }}"
       label="密码"
       clearable
+      type="password"
       placeholder="请输入密码"
       error="{{password.length<6}}"
       border="{{ false }}"

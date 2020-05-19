@@ -97,6 +97,14 @@
 					"id": -1,
 					"name": "pages/search/search",
 					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/my-setting/my-setting",
+					"pathName": "pages/my-setting/my-setting",
+					"query": "",
 					"scene": null
 				}
 			]
