@@ -37,17 +37,17 @@
 # 页面
 
 ## 页面大纲
-| 页面路径(对标`app.json`)          |                           内容                           |
-| :-------------------------------- | :------------------------------------------------------: |
-| `pages/index/index`               |              [首页](####pages/index/index)               |
-| `pages/search/search`             |             [搜索](####pages/search/search)              |
-| `pages/home/home`                 |             [ 我的相关](####pages/home/home)             |
-| `pages/blog-show/blog-show`       |    [显示指定博客内容](####pages/blog-show/blog-show)     |
-| `pages/login/login`               |              [登录](####pages/login/login)               |
-| `pages/register/register`         |           [ 注册](####pages/register/register)           |
-| `pages/my-blog/my-blog`           |          [我的博客](####pages/my-blog/my-blog)           |
-| `pages/my-like-blog/my-like-blog` |   [我收藏的博客](####pages/my-like-blog/my-like-blog)    |
-| `pages/my-setting/my-setting`     | [我的信息相关 退出登录](####pages/my-setting/my-setting) |
+| 页面路径(对标`app.json`)          |                         内容                          |
+| :-------------------------------- | :---------------------------------------------------: |
+| `pages/index/index`               |              [首页](#pages/index/index)               |
+| `pages/search/search`             |             [搜索](#pages/search/search)              |
+| `pages/home/home`                 |             [ 我的相关](#pages/home/home)             |
+| `pages/blog-show/blog-show`       |    [显示指定博客内容](#pages/blog-show/blog-show)     |
+| `pages/login/login`               |              [登录](#pages/login/login)               |
+| `pages/register/register`         |           [ 注册](#pages/register/register)           |
+| `pages/my-blog/my-blog`           |          [我的博客](#pages/my-blog/my-blog)           |
+| `pages/my-like-blog/my-like-blog` |   [我收藏的博客](#pages/my-like-blog/my-like-blog)    |
+| `pages/my-setting/my-setting`     | [我的信息相关 退出登录](#pages/my-setting/my-setting) |
 
 ### 页面详情
 #### pages/index/index
