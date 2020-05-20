@@ -39,9 +39,9 @@
 ## 页面大纲
 | 页面路径(对标`app.json`)          |                         内容                          |
 | :-------------------------------- | :---------------------------------------------------: |
-| `pages/index/index`               |              [首页](#pages/index/index)               |
+| `pages/index/index`               |              [首页](#pagesindexindex)               |
 | `pages/search/search`             |             [搜索](#pages/search/search)              |
-| `pages/home/home`                 |             [ 我的相关](#home)             |
+| `pages/home/home`                 |             [ 我的相关](#pages/home/home)             |
 | `pages/blog-show/blog-show`       |    [显示指定博客内容](#pages/blog-show/blog-show)     |
 | `pages/login/login`               |              [登录](#pages/login/login)               |
 | `pages/register/register`         |           [ 注册](#pages/register/register)           |
@@ -70,7 +70,7 @@ none
 ```js
 none
 ```
-#### home
+#### pages/home/home
 `app.json:`
 ```js
   "navigationBarTitleText": "我的"
