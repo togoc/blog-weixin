@@ -1,5 +1,6 @@
 <div class="h5-my-blog">
   <view class="my-blog-container">
     <my-blog-item blog="{{item}}" wx:for="{{blogs}}" wx:key="_id" />
+    <no-data wx:if="{{!blogs}}">请尝试下拉刷新.</no-data>
   </view>
 </div>

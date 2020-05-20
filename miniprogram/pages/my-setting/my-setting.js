@@ -14,6 +14,10 @@ Page({
   },
   handleLogout() {
     logout()
+    wx.switchTab({
+      url: '/pages/home/home'
+    });
+
   },
   async getUser(id) {
     if (id) {

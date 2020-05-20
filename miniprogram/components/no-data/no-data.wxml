@@ -1,0 +1,6 @@
+<view class="no-data">
+  <van-icon name="warning-o" size="100rpx" />
+  <p>暂无数据(⊙o⊙)？<slot /></p>
+  <p>
+  </p>
+</view>

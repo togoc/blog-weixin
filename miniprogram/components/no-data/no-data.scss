@@ -1,0 +1,10 @@
+@import "..\\..\\style\\app.scss";
+
+.no-data {
+    width      : 100%;
+    padding-top: 50rpx;
+    text-align : center;
+    color      : $uni-text-color-grey;
+    font-weight: bold;
+    font-size  : 30rpx;
+}

@@ -8,6 +8,7 @@
   />
   <block wx:if="{{searchList}}">
     <index-blog-item wx:for="{{searchList}}" blog="{{item}}" wx:key="_id" />
+    <no-data wx:if="{{searchList.length ===0}}" />
   </block>
   <block wx:else>
     <swiper autoplay circular indicator-dots indicator-active-color="#4fc08d" style="height:224rpx">
