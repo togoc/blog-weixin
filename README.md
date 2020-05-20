@@ -29,7 +29,7 @@
 
 | 名字          | 作用           |            使用的页面(频繁使用不列出)             |
 | ------------- | -------------- | :-----------------------------------------------: |
-| `wemark`      | markdown格式化 | [显示指定博客内容](####pages/blog-show/blog-show) |
+| `wemark`      | markdown格式化 | [显示指定博客内容](#pages-blog-show) |
 | `@vant/weapp` | `ui`框架       |                       很多                        |
 
 
@@ -37,20 +37,20 @@
 # 页面
 
 ## 页面大纲
-| 页面路径(对标`app.json`)          |                         内容                          |
-| :-------------------------------- | :---------------------------------------------------: |
-| `pages/index/index`               |              [首页](#pagesindexindex)               |
-| `pages/search/search`             |             [搜索](#pages/search/search)              |
-| `pages/home/home`                 |             [ 我的相关](#pages/home/home)             |
-| `pages/blog-show/blog-show`       |    [显示指定博客内容](#pages/blog-show/blog-show)     |
-| `pages/login/login`               |              [登录](#pages/login/login)               |
-| `pages/register/register`         |           [ 注册](#pages/register/register)           |
-| `pages/my-blog/my-blog`           |          [我的博客](#pages/my-blog/my-blog)           |
-| `pages/my-like-blog/my-like-blog` |   [我收藏的博客](#pages/my-like-blog/my-like-blog)    |
-| `pages/my-setting/my-setting`     | [我的信息相关 退出登录](#pages/my-setting/my-setting) |
+| 页面路径(对标`app.json`)          |                    内容                    |
+| :-------------------------------- | :----------------------------------------: |
+| `pages/index/index`               |            [首页](#pages-index)            |
+| `pages/search/search`             |           [搜索](#pages-search)            |
+| `pages/home/home`                 |          [ 我的相关](#pages-home)          |
+| `pages/blog-show/blog-show`       |    [显示指定博客内容](#pages-blog-show)    |
+| `pages/login/login`               |            [登录](#pages-login)            |
+| `pages/register/register`         |          [ 注册](#pages-register)          |
+| `pages/my-blog/my-blog`           |         [我的博客](#pages-my-blog)         |
+| `pages/my-like-blog/my-like-blog` |    [我收藏的博客](#pages-my-like-blog)     |
+| `pages/my-setting/my-setting`     | [我的信息相关 退出登录](#pages-my-setting) |
 
 ### 页面详情
-#### pages/index/index
+#### pages index
 `app.json:`
 ```js
   "navigationBarTitleText": "首页",
@@ -60,7 +60,7 @@
 ```js
 none
 ```
-#### pages/search/search
+#### pages search
 `app.json:`
 ```js
   "navigationBarTitleText": "搜索",
@@ -70,7 +70,7 @@ none
 ```js
 none
 ```
-#### pages/home/home
+#### pages home
 `app.json:`
 ```js
   "navigationBarTitleText": "我的"
@@ -79,7 +79,7 @@ none
 ```js
 none
 ```
-#### pages/blog-show/blog-show
+#### pages blog show
 `app.json:`
 ```js
    "usingComponents": {
@@ -92,7 +92,7 @@ none
     id:页面id
 }
 ```
-#### pages/login/login
+#### pages login
 `app.json:`
 ```js
   "navigationBarTitleText": "登录"
@@ -101,7 +101,7 @@ none
 ```js
 none
 ```
-#### pages/register/register
+#### pages register
 `app.json:`
 ```js
   "navigationBarTitleText": "注册"
@@ -110,7 +110,7 @@ none
 ```js
 none
 ```
-#### pages/my-blog/my-blog
+#### pages my blog
 `app.json:`
 ```js
   "navigationBarTitleText": "我的博客",
@@ -120,7 +120,7 @@ none
 ```js
 none
 ```
-#### pages/my-like-blog/my-like-blog
+#### pages my like blog
 `app.json:`
 ```js
   "navigationBarTitleText": "我的收藏",
@@ -130,7 +130,7 @@ none
 ```js
 none
 ```
-#### pages/my-setting/my-setting
+#### pages my setting
 `app.json:`
 ```js
   "navigationBarTitleText": "信息"
