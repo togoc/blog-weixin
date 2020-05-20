@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    email: "",
-    password: "",
+    email: "309128090@qq.com",
+    password: "123456",
   },
   async  summit() {
     let { email, password } = this.data

@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="tabbar">
-  <van-tabbar fixed active="{{ active }}" bind:change="onChange">
+  <van-tabbar fixed active-color="#4fc08d" active="{{ active }}" bind:change="onChange">
     <van-tabbar-item class="tabbar-item" wx:for="{{ list }}" wx:key="text" icon="{{ item.icon }}">
       {{
       item.text
