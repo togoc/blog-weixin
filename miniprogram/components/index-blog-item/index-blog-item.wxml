@@ -2,7 +2,7 @@
 <view class="blog-item" bindtap="handleViewPre" data-blogid="{{blog._id}}">
   <h3 class="blog-title">{{ blog.title }}</h3>
   <div class="blog-detail">
-    <span>{{ blog.markdown }}</span>
+    <span class="markdown">{{ blog.markdown }}</span>
     <div class="blog-thumbnails" wx-if="{{blog.thumbnails.length}}">
       <image src="{{blog.thumbnails.length? blog.thumbnails[0].src: ''}}" />
     </div>

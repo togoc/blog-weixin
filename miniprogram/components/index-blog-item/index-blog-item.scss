@@ -45,10 +45,11 @@
             }
         }
 
-        span {
+        .markdown {
             width             : 100%;
             font-size         : 14px;
             line-height       : 22px;
+            font-weight       : bold;
             letter-spacing    : 0;
             word-break        : break-all;
             white-space       : normal;
