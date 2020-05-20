@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    email: "309128090@qq.com",
+    email: "togoc@xx.com",
     password: "123456",
   },
   async  summit() {

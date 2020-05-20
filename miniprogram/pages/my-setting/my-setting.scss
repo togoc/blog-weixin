@@ -14,7 +14,7 @@ page {
         overflow: hidden;
         z-index : -1;
         position: relative;
-        filter  : brightness(80%);
+        filter  : blur(5px) brightness(80%);
 
         .img {
             width: 100%;

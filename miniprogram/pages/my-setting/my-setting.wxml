@@ -1,20 +1,12 @@
 <!--miniprogram/pages/my-setting/my-setting.wxml-->
-<view class="user-info">
+<view class="user-info" wx:if="{{user}}">
   <view class="haead-img-bg">
-    <image
-      class="img"
-      src="http://106.13.184.92:3000/blog/file-service/img/5eae80aaf9e65f03284d962c"
-      lazy-load="false"
-    />
+    <image class="img" src="{{user.avatar}}" lazy-load="false" />
   </view>
   <view class="info">
     <view class="img-name">
       <view class="user-img-container">
-        <image
-          class="user-img"
-          src="http://106.13.184.92:3000/blog/file-service/img/5eae80aaf9e65f03284d962c"
-          lazy-load="false"
-        />
+        <image class="user-img" src="{{user.avatar}}" lazy-load="false" />
       </view>
       <view class="user-name">
         <text class="name">{{user.name}}</text>
@@ -47,4 +39,7 @@
     <van-button type="danger" bind:click="handleLogout">退出登录</van-button>
     <van-button type="primary" bind:click="changeUser">切换用户</van-button>
   </view>
+</view>
+<view class="error" wx:else>
+  <no-data>数据错误,请返回!</no-data>
 </view>
