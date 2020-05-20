@@ -12,12 +12,33 @@ Page({
     user: {},
     currentUser: null
   },
-  handleLogout() {
+  async cleanToken() {
+    await wxHttp({
+      url: '/user-service/logout-all'
+    })
     logout()
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/home/home'
     });
+  },
+  async changeUser() {
 
+    await wxHttp({
+      url: '/user-service/logout'
+    })
+    logout()
+    wx.reLaunch({
+      url: '/pages/login/login'
+    });
+  },
+  async handleLogout() {
+    await wxHttp({
+      url: '/user-service/logout'
+    })
+    logout()
+    wx.reLaunch({
+      url: '/pages/home/home'
+    });
   },
   async getUser(id) {
     if (id) {

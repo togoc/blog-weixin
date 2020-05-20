@@ -113,7 +113,8 @@ none
 #### pages/my-blog/my-blog
 `app.json:`
 ```js
-  "navigationBarTitleText": "我的博客"
+  "navigationBarTitleText": "我的博客",
+  "enablePullDownRefresh": true
 ```
 `query:`
 ```js
@@ -122,7 +123,8 @@ none
 #### pages/my-like-blog/my-like-blog
 `app.json:`
 ```js
-  "navigationBarTitleText": "我的收藏"
+  "navigationBarTitleText": "我的收藏",
+  "enablePullDownRefresh": true
 ```
 `query:`
 ```js

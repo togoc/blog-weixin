@@ -43,8 +43,8 @@
     </view>
   </view>
   <view class="handle-btn" wx:if="{{currentUser._id === user._id}}">
-    <van-button plain type="warning" bind:click="handleLogout">清除token</van-button>
+    <van-button plain type="warning" bind:click="cleanToken">清除token</van-button>
     <van-button type="danger" bind:click="handleLogout">退出登录</van-button>
-    <van-button type="primary" bind:click="handleLogout">切换用户</van-button>
+    <van-button type="primary" bind:click="changeUser">切换用户</van-button>
   </view>
 </view>

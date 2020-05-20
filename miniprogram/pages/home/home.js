@@ -111,12 +111,6 @@ Page({
           user: res
         })
       }
-      // 有点风险 主要是解决退出登录 仍显示用户信息的问题
-      if (this.data.user !== null) {
-        this.setData({
-          user: null
-        })
-      }
     }
   },
 
