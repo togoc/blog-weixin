@@ -1,7 +1,9 @@
 > 小程序预览:
-<center>
+
+<div  align=center>
 <img src="images/qr.jpg" width="145" height="145"/>
-</center>
+</div>
+
 #  遗留问题
 
 - ~~切换用户~~
