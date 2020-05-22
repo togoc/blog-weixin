@@ -1,7 +1,7 @@
 > 小程序预览:
 
 <div  align=center>
-<img src="images/qr.jpg" width="145" height="145"/>
+<img src="http://106.13.184.92:3000/public/images/github/qr.jpg" width="145" height="145"/>
 </div>
 
 #  遗留问题
